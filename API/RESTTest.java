@@ -37,7 +37,7 @@ public class RESTTest {
 
             assertThat(books.size()).isGreaterThan(0);
     }
-    @Disabled
+    @Disabled //Не проходит, если в библиотеке есть поля с неверными типами, см. комментарии в экселе.
     @Test
     public void A02GETAllBooksEmptyLibrary(){
         List<Book> booksToDelete = given()
@@ -292,7 +292,7 @@ public class RESTTest {
         Assertions.assertFalse(response.asPrettyString().contains("\"name\": \"The Art of War\""));
     }
 
-    @Disabled
+    @Disabled //Не проходит, если в библиотеке есть поля с неверными типами, см. комментарии в экселе.
     @Test
     public void A15POSTBookEmptyLibrary(){
         List<Book> booksToDelete = given()
